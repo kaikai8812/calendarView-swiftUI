@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CF7D5BED-9363-42F6-8503-9BA362585C5A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E63E443B-6CC0-4394-B12E-E7DCDB30FB4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "calendarView+swiftUI/CalendarView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "calendarView(_:decorationFor:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E63E443B-6CC0-4394-B12E-E7DCDB30FB4E - ec4c426e9a4f4b12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "calendarView_swiftUI.CalendarView.Coordinator.calendarView(_: __C.UICalendarView, decorationFor: Foundation.DateComponents) -&gt; Swift.Optional&lt;__C.UICalendarViewDecoration&gt;"
+                  moduleName = "calendarView+swiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Project/SwiftUiPractice/calendarView+swiftUI/calendarView+swiftUI/CalendarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "E63E443B-6CC0-4394-B12E-E7DCDB30FB4E - e4e39a4b655ae7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIView in calendarView_swiftUI.CalendarView.Coordinator.calendarView(_: __C.UICalendarView, decorationFor: Foundation.DateComponents) -&gt; Swift.Optional&lt;__C.UICalendarViewDecoration&gt;"
+                  moduleName = "calendarView+swiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Project/SwiftUiPractice/calendarView+swiftUI/calendarView+swiftUI/CalendarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB3FA5EE-7CBD-4586-B521-C453B6DB94AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "calendarView+swiftUI/CalendarView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "calendarView(_:decorationFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
