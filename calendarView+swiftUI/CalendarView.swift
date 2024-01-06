@@ -9,31 +9,19 @@ import Foundation
 import UIKit
 import SwiftUI
 
-//struct CalendarView: UIViewRepresentable {
-//
-//    func makeUIView(context: Context) -> some UIView {
-//        let calenderView = UICalendarView()
-//        calenderView.locale = Locale(identifier: "ja")
-//        return calenderView
-//    }
-//
-//    func updateUIView(_ uiView: UIViewType, context: Context) {}
-//
-//}
-
 struct CalendarView: UIViewRepresentable {
     let didSelectDate: (_ dateComponents: DateComponents) -> Void
-    let iconDate: Int
+    let iconDates: [DateComponents]
     
     // Coordibatorのクラスを定義。こいつが選択のdelegateに順序している。
     final public class Coordinator: NSObject, UICalendarSelectionSingleDateDelegate, UICalendarViewDelegate {
         let didSelectDate: (_ dateComponents: DateComponents) -> Void
-        let iconDate: Int
+        let iconDates: [DateComponents]
         
         //  ここのinitで、浴びた日付を渡すことができれば、特定の日付にマークをつけることはできそう。
-        init(didSelectDate: @escaping (_: DateComponents) -> Void, iconDate: Int) {
+        init(didSelectDate: @escaping (_: DateComponents) -> Void, iconDates: [DateComponents]) {
             self.didSelectDate = didSelectDate
-            self.iconDate = iconDate
+            self.iconDates = iconDates
         }
         
         //  didSelectDateのクロージャに対して、dateComponentsをdelegate発火時に渡すことで、swiftUI側にデータを渡している。
@@ -46,7 +34,22 @@ struct CalendarView: UIViewRepresentable {
         
         public func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
             
-            if dateComponents.day == iconDate {
+            guard let currentYear = dateComponents.year,
+                  let currentMonth = dateComponents.month,
+                  let currentDay = dateComponents.day
+            else { return nil }
+            
+            let isShowIcon = iconDates.contains { hitDate in
+                
+                guard let hitYear = hitDate.year,
+                      let hitMonth = hitDate.month,
+                      let hitDay = hitDate.day
+                else { return false }
+                
+                return currentYear == hitYear && currentMonth == hitMonth && currentDay == hitDay
+            }
+            
+            if isShowIcon {
                 return .customView {
                     let image = UIImage(named: "tele2")
                     let view = UIImageView(image: image)
@@ -61,7 +64,7 @@ struct CalendarView: UIViewRepresentable {
     
     
     public func makeCoordinator() -> Coordinator {
-        Coordinator(didSelectDate: didSelectDate, iconDate: iconDate)
+        Coordinator(didSelectDate: didSelectDate, iconDates: iconDates)
     }
     
     
